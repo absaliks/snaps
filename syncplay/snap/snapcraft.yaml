@@ -5,6 +5,7 @@ summary: Play media synchronously across multiple instances over the network
 description: |
   Syncplay is a solution to synchronize video playback of multiple
   people over the Internet.
+license: Apache-2.0  
 grade: stable
 confinement: classic
 
