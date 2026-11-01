@@ -1,6 +1,6 @@
 # syncplay
 
-A snap package for [Syncplay](https://syncplay.pl), a solution for synchronizing media playback across multiple instances over the network.
+A snap package for [Syncplay](https://syncplay.pl), a solution for synchronizing media playback across multiple instances over the network. Syncplay itself is licensed under the Apache License 2.0
 
 ## Building from source
 
