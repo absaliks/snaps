@@ -1,0 +1,39 @@
+name: syncplay
+base: core24
+version: "1.7.6"
+summary: Play media synchronously across multiple instances over the network
+description: |
+  Syncplay is a solution to synchronize video playback of multiple
+  people over the Internet.
+grade: stable
+confinement: classic
+
+apps:
+  syncplay:
+    command: bin/python $SNAP/bin/syncplay
+    plugs:
+      - network
+      - network-bind
+      - audio-playback
+      - x11
+      - desktop
+
+parts:
+  syncplay:
+    plugin: python
+    source: https://github.com/Syncplay/syncplay.git
+    source-type: git
+    source-tag: v1.7.6
+    build-packages:
+      - python3
+      - python3-pip
+      - python3-venv
+    stage-packages:
+      - python3.12-minimal
+      - python3-minimal
+      - libpython3.12-minimal
+      - libpython3.12-stdlib
+      - python3-venv
+    python-packages:
+      - PySide6
+      - certifi
